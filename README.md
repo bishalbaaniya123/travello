@@ -1,9 +1,10 @@
+#### Table of Contents
 - [Project Basics](#project-basics)
 - [Setup](#setup)
-  * [Software Dependencies](#software-dependencies)
+  * [Install Software Dependencies](#software-dependencies)
   * [Setup *legalfit* `pyenv` environment](#setup-legalfit-pyenv-environment)
   * [Install python packages](#install-python-packages)
-  * [Set your local server to run from <u>legalfit.local</u> and <u>admin.local</u>](#set-your-local-server-to-run-from-legalfitlocal-and-adminlocal)
+  * [Set your local server to run from <ins>legalfit.local</ins> and <ins>admin.local</ins>](#set-your-local-server-to-run-from-legalfitlocal-and-adminlocal)
   * [Setup your PostgreSQL](#setup-your-postgresql)
   * [Manually load the database](#manually-load-the-database)
   * [Setup job queues](#setup-job-queues)
@@ -40,23 +41,22 @@
 
 * #### Django Configuration
 
-    a. Because there are many environments, viz. development, testing, staging and production
+    - Because there are many environments, viz. development, testing, staging and production
        environments, and for security configuration there is a configuration
        file hierarchy using YAML files. These YAML files are merged together
        and the settings can be modified like any normal Django project
        (e.g. `settings.DEBUG`)
        
-    b. File priorities:
-    
-    * `legalfit/settings/base.yml`
-    * `legalfit/settings/$ENVIRONMENT.yml`
-    * `legalfit/settings/local/base.yml` (in `.gitignore`)
-    * `legalfit/settings/local/$ENVIRONMENT.yml` (in `.gitignore`)
+    - File priorities: 
+        1. `legalfit/settings/base.yml`
+        2. `legalfit/settings/$ENVIRONMENT.yml`
+        3. `legalfit/settings/local/base.yml` (in `.gitignore`)
+        4. `legalfit/settings/local/$ENVIRONMENT.yml` (in `.gitignore`)
 
 
 # Setup
 
-## Software Dependencies
+## Install Software Dependencies
 
 ### Mac
 
@@ -77,7 +77,7 @@
    - `sudo apt install redis-server memcached postgresql postgresql-contrib`
 
 ### Setup *legalfit* `pyenv` environment 
-1. see [toolbox](https://github.com/big6media/toolbox/blob/master/README.md#0-setup-python-environment) for detailed instructions
+1. Setup [toolbox](https://github.com/big6media/toolbox/blob/master/README.md#0-setup-python-environment)
 
 2. `pyenv virtualenv 3.7.2 legalfit`
 
@@ -92,31 +92,31 @@
 - Create and Populate `legalfit/settings/local/base.yaml` for environment specific settings (e.g. api keys, database config, etc) (use `legalfit/settings/local_base.example` as reference)
     - Below is an example dashboard domain configuration:
 
-```yaml
-...
-allowed_hosts:
-    - localhost
-    - dashboard.local
+    ```yaml
+        ...
+        allowed_hosts:
+            - localhost
+            - dashboard.local
+        
+        legalfit_portal_url: 'http://dashboard.local:8000'
+        ...
+    ```
 
-legalfit_portal_url: 'http://dashboard.local:8000'
-...
-```
-
-## Setup your PostgreSQL
+## Setup PostgreSQL
 
 1. setup postgres user/password
     - Mac: Default `brew` install creates user `$USER` with no password
     - Linux
-```
-$ sudo -i -u postgres
-$ createuser --interactive
-Enter name of role to add: bill
-Shall the new role be a superuser? (y/n) y
-$ psql
-postgres=# ALTER USER bill WITH PASSWORD 'bill';
-postgres=# \q
-$ exit
-```
+ ```
+    $ sudo -i -u postgres
+    $ createuser --interactive
+        Enter name of role to add: bill
+        Shall the new role be a superuser? (y/n) y
+    $ psql
+    postgres=# ALTER USER bill WITH PASSWORD 'bill';
+    postgres=# \q
+    $ exit
+ ```
 2. set local postgresql user in `settings/local/base.yaml`
 3. `createdb legalfit`
 4. `./manage.py load_database`
@@ -253,7 +253,7 @@ in the settings folder should have starter local settings to get the project go
   - [Perfect Scrollbar 1.4.0](https://github.com/noraesae/perfect-scrollbar)
   - ~~[Stroke 7 Icon Font 1.0.1](https://github.com/olimsaidov/pixeden-stroke-7-icon)~~  > Font-Awesome
   
-  ## Steps to install/setup Robot Framework
+### Steps to install/setup Robot Framework
   
   - pip install numpy==1.16.1
   - sudo python3 -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.7.post2-cp37-cp37m-linux_x86_64.whl
