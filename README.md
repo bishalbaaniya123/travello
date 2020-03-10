@@ -28,7 +28,7 @@
   
 # Project Basics
 
-* Legalfit is split into 2 main UI views
+* ####Legalfit is split into 2 main UI views
 
    * Team-only CRM View
       - Production: https://crm.legalfit.io/
@@ -38,7 +38,7 @@
      - Production: https://dashboard.legalfit.io/
      - Development: http://dashboard.local:8000/
 
-Django Configuration
+* ####Django Configuration
 
     a. Because there are many environments, viz. development, testing, staging and production
        environments, and for security configuration there is a configuration
@@ -48,10 +48,10 @@ Django Configuration
        
     b. File priorities:
     
-    - `legalfit/settings/base.yml`
-    - `legalfit/settings/$ENVIRONMENT.yml`
-    - `legalfit/settings/local/base.yml` (in `.gitignore`)
-    - `legalfit/settings/local/$ENVIRONMENT.yml` (in `.gitignore`)
+    `legalfit/settings/base.yml`
+    `legalfit/settings/$ENVIRONMENT.yml`
+    `legalfit/settings/local/base.yml` (in `.gitignore`)
+    `legalfit/settings/local/$ENVIRONMENT.yml` (in `.gitignore`)
 
 
 # Setup
