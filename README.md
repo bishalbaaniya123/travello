@@ -58,7 +58,7 @@ Django Configuration
 
 ## Software Dependencies
 
-#### Mac
+### Mac
 
 ##### Redis
 - `brew install redis`
@@ -70,11 +70,11 @@ Django Configuration
 - `brew install memcached`
 - `brew services start memcached`
       
-#### Ubuntu
+### Ubuntu
 ##### Update Packages
-`sudo apt update`
+- `sudo apt update`
 ##### Install Redis, Memcached and PostgreSQL
-`sudo apt install redis-server memcached postgresql postgresql-contrib`
+- `sudo apt install redis-server memcached postgresql postgresql-contrib`
 
 ## Setup *legalfit* `pyenv` environment 
 1. see [toolbox](https://github.com/big6media/toolbox/blob/master/README.md#0-setup-python-environment) for detailed instructions
