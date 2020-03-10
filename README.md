@@ -86,7 +86,7 @@
 * `pip install pipenv`
 * `pipenv sync --dev`
 
-### Set your local server to run from __legalfit.local__ and __admin.local__
+### Set your local server to run from <ins>legalfit.local</ins> and <ins>admin.local</ins>
 
 - Add `127.0.0.1   dashboard.local` to `/etc/hosts`
 - Create and Populate `legalfit/settings/local/base.yaml` for environment specific settings (e.g. api keys, database config, etc) (use `legalfit/settings/local_base.example` as reference)
