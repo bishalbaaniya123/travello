@@ -1,6 +1,6 @@
 #### Table of Contents
 - [Project Basics](#project-basics)
-   * [UI Views](#legalfit-is-split-into-2-main-ui-views)
+   * [Legalfit UI Views](#legalfit-is-split-into-2-main-ui-views)
    * [Django Configuration](#django-configuration)
 - [Setup](#setup)
   * [Install Software Dependencies](#install-software-dependencies)
@@ -79,17 +79,17 @@
 ###### Install Redis, Memcached and PostgreSQL
    - `sudo apt install redis-server memcached postgresql postgresql-contrib`
 
-### Setup *legalfit* `pyenv` environment 
+## Setup *legalfit* `pyenv` environment 
 1. Setup [toolbox](https://github.com/big6media/toolbox/blob/master/README.md#0-setup-python-environment)
 
 2. `pyenv virtualenv 3.7.2 legalfit`
 
-### Install python packages
+## Install python packages
 
 * `pip install pipenv`
 * `pipenv sync --dev`
 
-### Set your local server to run from <ins>legalfit.local</ins> and <ins>admin.local</ins>
+## Set your local server to run from <ins>legalfit.local</ins> and <ins>admin.local</ins>
 
 - Add `127.0.0.1   dashboard.local` to `/etc/hosts`
 - Create and Populate `legalfit/settings/local/base.yaml` for environment specific settings (e.g. api keys, database config, etc) (use `legalfit/settings/local_base.example` as reference)
@@ -105,7 +105,7 @@
         ...
     ```
 
-### Setup PostgreSQL
+## Setup PostgreSQL
 
 1. setup postgres user/password
     - Mac: Default `brew` install creates user `$USER` with no password
@@ -130,7 +130,7 @@
 
 Navigate to `http://localhost:8000` or `http://legalfit.local`
 
-### Manually load the database
+## Manually load the database
 Manual installation of database
 ```
 $ dropdb legalfit
@@ -148,14 +148,14 @@ $ psql legalfit < /tmp/legalfit.sql
 ```
 
 
-### Setup job queues
+## Setup job queues
 
 Typically in alternate terminal tabs, when testing at a macro level
 
 - `./manage.py task_queue_celery`Celery job queue
 - `./manage.py task_queue_throttled` Celery throttled queue
 
-### Setup SASS compiler
+## Setup SASS compiler
 
 - Install `node` (`brew install nodejs`)
 - `cd 3rdparty/maisonnette`
