@@ -3,7 +3,7 @@
   * [Software Dependencies](#software-dependencies)
   * [Setup *legalfit* `pyenv` environment](#setup-legalfit-pyenv-environment)
   * [Install python packages](#install-python-packages)
-  * [Set your local server to run from <u>legalfit.local</u> and <u>admin.local</u>](#set-your-local-server-to-run-from-ulegalfitlocalu-and-uadminlocalu)
+  * [Set your local server to run from <u>legalfit.local</u> and <u>admin.local</u>](#set-your-local-server-to-run-from-legalfitlocal-and-adminlocal)
   * [Setup your PostgreSQL](#setup-your-postgresql)
   * [Manually load the database](#manually-load-the-database)
   * [Setup job queues](#setup-job-queues)
