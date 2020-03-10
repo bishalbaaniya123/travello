@@ -29,6 +29,7 @@
   * [Front-End](#front-end-1)
       + [FusionCharts](#fusioncharts)
       + [Maisionette Theme](#maisionette-theme)
+      + [Steps to install/setup Robot Framework](#steps-to-installsetup-robot-framework)
   
 # Project Basics
 
