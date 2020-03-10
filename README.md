@@ -230,9 +230,9 @@ The precedence order of settings files:
 Files in `settings/local` are not added to the repository. The `*.example` files
 in the settings folder should have starter local settings to get the project go
 
-### Front-End
+## Front-End
 
-## FusionCharts
+### FusionCharts
 
 - Galleries:
   - [Chart Gallery](https://www.fusioncharts.com/charts?product=fusioncharts) pretty product demos
@@ -252,9 +252,9 @@ in the settings folder should have starter local settings to get the project go
   - [Perfect Scrollbar 1.4.0](https://github.com/noraesae/perfect-scrollbar)
   - ~~[Stroke 7 Icon Font 1.0.1](https://github.com/olimsaidov/pixeden-stroke-7-icon)~~  > Font-Awesome
   
-  ##steps to install/setup Robot Framework
+  ## steps to install/setup Robot Framework
   
-  1. pip install numpy==1.16.1
-  2. sudo python3 -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.7.post2-cp37-cp37m-linux_x86_64.whl
-  3  pip install robotframework-ride
-  4. on terminal, type ride.py
+  - pip install numpy==1.16.1
+  - sudo python3 -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.7.post2-cp37-cp37m-linux_x86_64.whl
+  -  pip install robotframework-ride
+  - on terminal, type ride.py
