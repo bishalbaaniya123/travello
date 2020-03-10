@@ -71,22 +71,22 @@
    - `brew services start memcached`
       
 ### Ubuntu
-##### Update Packages
+###### Update Packages
    - `sudo apt update`
-##### Install Redis, Memcached and PostgreSQL
+###### Install Redis, Memcached and PostgreSQL
    - `sudo apt install redis-server memcached postgresql postgresql-contrib`
 
-## Setup *legalfit* `pyenv` environment 
+### Setup *legalfit* `pyenv` environment 
 1. see [toolbox](https://github.com/big6media/toolbox/blob/master/README.md#0-setup-python-environment) for detailed instructions
 
 2. `pyenv virtualenv 3.7.2 legalfit`
 
-## Install python packages
+### Install python packages
 
 * `pip install pipenv`
 * `pipenv sync --dev`
 
-## Set your local server to run from <u>legalfit.local</u> and <u>admin.local</u>
+### Set your local server to run from __legalfit.local__ and __admin.local__
 
 - Add `127.0.0.1   dashboard.local` to `/etc/hosts`
 - Create and Populate `legalfit/settings/local/base.yaml` for environment specific settings (e.g. api keys, database config, etc) (use `legalfit/settings/local_base.example` as reference)
