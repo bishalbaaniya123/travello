@@ -116,7 +116,6 @@ $ psql
 postgres=# ALTER USER bill WITH PASSWORD 'bill';
 postgres=# \q
 $ exit
-
 ```
 2. set local postgresql user in `settings/local/base.yaml`
 3. `createdb legalfit`
@@ -244,7 +243,7 @@ in the settings folder should have starter local settings to get the project go
   - [List of Charts](https://www.fusioncharts.com/dev/chart-guide/list-of-charts) - detailed info on charts
   - [Chart Attributes](https://www.fusioncharts.com/dev/chart-attributes/?chart=heatmap) - detailed info on settings and options
 
-## Maisionette Theme
+### Maisionette Theme
 
 - [Documentation](http://foxythemes.net/preview/products/maisonnette/documentation.php)
 
@@ -254,9 +253,9 @@ in the settings folder should have starter local settings to get the project go
   - [Perfect Scrollbar 1.4.0](https://github.com/noraesae/perfect-scrollbar)
   - ~~[Stroke 7 Icon Font 1.0.1](https://github.com/olimsaidov/pixeden-stroke-7-icon)~~  > Font-Awesome
   
-  ## steps to install/setup Robot Framework
+  ## Steps to install/setup Robot Framework
   
   - pip install numpy==1.16.1
   - sudo python3 -m pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04/wxPython-4.0.7.post2-cp37-cp37m-linux_x86_64.whl
-  -  pip install robotframework-ride
+  - pip install robotframework-ride
   - on terminal, type ride.py
