@@ -21,11 +21,10 @@
   * [Front-end](#front-end)
   * [CSS: Run SASS compiler](#css-run-sass-compiler)
 - [Notes](#notes)
-    + [Environment](#environment)
   * [How Django Settings work](#how-django-settings-work)
-    + [Front-End](#front-end-1)
-  * [FusionCharts](#fusioncharts)
-  * [Maisionette Theme](#maisionette-theme)
+  * [Front-End](#front-end-1)
+      + [FusionCharts](#fusioncharts)
+      + [Maisionette Theme](#maisionette-theme)
   
 # Project Basics
 
@@ -164,19 +163,19 @@ Common scenarios to be productive as a dev on this project
 
 ## Pipenv
 
-## Install python packages
+### Install python packages
 
 - `pipenv sync --dev`
 
-## Check security vulnerabilities
+### Check security vulnerabilities
 
 - `pipenv check`
 
-## Updating python package
+### Updating python package
 
 - `pipenv update` or `pipenv update <package_name>`
 
-## Adding python packages
+### Adding python packages
 
 - Development only: `pipenv install --dev <package_name>`
 - Production:
@@ -185,11 +184,11 @@ Common scenarios to be productive as a dev on this project
 
 ## Database
 
-## View job queues
+### View job queues
 
 - `./manage.py task_queue_monitor` Celery monitor frontend http://localhost:5555
 
-## Download prod data to your local environment
+### Download prod data to your local environment
 
 - Disconnect all of the things from the DB (workers/test webservers/pg admin)
 - `dropdb legalfit`
@@ -199,7 +198,7 @@ Common scenarios to be productive as a dev on this project
 
 ## Front-end
 
-## CSS: Run SASS compiler
+### CSS: Run SASS compiler
 
 `portal/static/css/app_generated.css` is generated dynamically, don't update it directly as the next
 generation will just undo everything, instead update `portal/static/css/main.scss`.
@@ -214,8 +213,6 @@ generation will just undo everything, instead update `portal/static/css/main.scs
     for all of the plugins as reference
 
 # Notes
-
-### Environment
 
 ## How Django Settings work
 
