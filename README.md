@@ -48,10 +48,10 @@
        
     b. File priorities:
     
-    `legalfit/settings/base.yml`
-    `legalfit/settings/$ENVIRONMENT.yml`
-    `legalfit/settings/local/base.yml` (in `.gitignore`)
-    `legalfit/settings/local/$ENVIRONMENT.yml` (in `.gitignore`)
+    * `legalfit/settings/base.yml`
+    * `legalfit/settings/$ENVIRONMENT.yml`
+    * `legalfit/settings/local/base.yml` (in `.gitignore`)
+    * `legalfit/settings/local/$ENVIRONMENT.yml` (in `.gitignore`)
 
 
 # Setup
