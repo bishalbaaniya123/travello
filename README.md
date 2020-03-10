@@ -1,25 +1,29 @@
 #### Table of Contents
 - [Project Basics](#project-basics)
+   * [UI Views](#legalfit-is-split-into-2-main-ui-views)
+   * [Django Configuration](#django-configuration)
 - [Setup](#setup)
-  * [Install Software Dependencies](#software-dependencies)
+  * [Install Software Dependencies](#install-software-dependencies)
+        + [Mac](#mac)
+        + [Ubuntu](#ubuntu)
   * [Setup *legalfit* `pyenv` environment](#setup-legalfit-pyenv-environment)
   * [Install python packages](#install-python-packages)
   * [Set your local server to run from <ins>legalfit.local</ins> and <ins>admin.local</ins>](#set-your-local-server-to-run-from-legalfitlocal-and-adminlocal)
-  * [Setup your PostgreSQL](#setup-your-postgresql)
+  * [Setup PostgreSQL](#setup-postgresql)
   * [Manually load the database](#manually-load-the-database)
   * [Setup job queues](#setup-job-queues)
   * [Setup SASS compiler](#setup-sass-compiler)
 - [Usage](#usage)
   * [Pipenv](#pipenv)
-  * [Install python packages](#install-python-packages-1)
-  * [Check security vulnerabilities](#check-security-vulnerabilities)
-  * [Updating python package](#updating-python-package)
-  * [Adding python packages](#adding-python-packages)
+      + [Install python packages](#install-python-packages-1)
+      + [Check security vulnerabilities](#check-security-vulnerabilities)
+      + [Updating python package](#updating-python-package)
+      + [Adding python packages](#adding-python-packages)
   * [Database](#database)
-  * [View job queues](#view-job-queues)
-  * [Download prod data to your local environment](#download-prod-data-to-your-local-environment)
+      + [View job queues](#view-job-queues)
+      + [Download prod data to your local environment](#download-prod-data-to-your-local-environment)
   * [Front-end](#front-end)
-  * [CSS: Run SASS compiler](#css-run-sass-compiler)
+      + [CSS: Run SASS compiler](#css-run-sass-compiler)
 - [Notes](#notes)
   * [How Django Settings work](#how-django-settings-work)
   * [Front-End](#front-end-1)
@@ -101,7 +105,7 @@
         ...
     ```
 
-## Setup PostgreSQL
+### Setup PostgreSQL
 
 1. setup postgres user/password
     - Mac: Default `brew` install creates user `$USER` with no password
@@ -126,7 +130,7 @@
 
 Navigate to `http://localhost:8000` or `http://legalfit.local`
 
-## Manually load the database
+### Manually load the database
 Manual installation of database
 ```
 $ dropdb legalfit
@@ -144,14 +148,14 @@ $ psql legalfit < /tmp/legalfit.sql
 ```
 
 
-## Setup job queues
+### Setup job queues
 
 Typically in alternate terminal tabs, when testing at a macro level
 
 - `./manage.py task_queue_celery`Celery job queue
 - `./manage.py task_queue_throttled` Celery throttled queue
 
-## Setup SASS compiler
+### Setup SASS compiler
 
 - Install `node` (`brew install nodejs`)
 - `cd 3rdparty/maisonnette`
