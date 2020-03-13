@@ -46,23 +46,24 @@ createdb saitama
 ./manage.py createsuperuser
 ```
 
-## 3. Setup Task Runner
+## 4. Setup Task Runner
 
 ```bash
 brew install redis
 brew services start redis
 ```
 
-## 4. Hello World (Actually testing the application)
+## 5. Hello World (Actually testing the application)
 
 #### Normal Test Server
 
-1. Run `npm run watch` in terminal #1 (Builds CSS/JS assets)
-2. Run `./manage.py runserver` in terminal #2 (Runs localhost:8000 webserver)
-3. Run `./manage.py task_queue_celery` in terminal #3 (job runner for background tasks).
+1. Create an empty app.scss file in frontend/genos/app.scss folder
+2. Run `npm run watch` in terminal #1 (Builds CSS/JS assets)
+3. Run `./manage.py runserver` in terminal #2 (Runs localhost:8000 webserver)
+4. Run `./manage.py task_queue_celery` in terminal #3 (job runner for background tasks).
     - As an alternative you can put `job_queue_task_always_eager: True` in `settings/local/base.yaml`
       to run the jobs instantly in the browser session. Might slow down API performance.
-3. View http://localhost:8000 in your browser.
+5. View http://localhost:8000 in your browser.
 
 #### SSL Test server
 
@@ -70,7 +71,7 @@ brew services start redis
     * `wildcard_domain: https://*.dev.big6media.com:9000`
 1. Same steps as above, but for step #2 use: `./manage.py runsslserver 127.0.0.1:9000`
 
-## 5. Create a mock website
+## 6. Create a mock website
 
 #### Add a website object
 
@@ -525,6 +526,5 @@ Template composed of:
     * single/double inside border
 * Element Styling
   * Elevation
-  *
 * Accents & Flourishes
   * Selection indicators
